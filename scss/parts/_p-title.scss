@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+.top {
+
+	&__title {
+		font-family: "游明朝体", 'Yu Mincho', 'YuMincho', 'Noto Serif JP', serif;
+		font-weight: normal;
+		font-size: 90px;
+		&--first {
+			color: #00e8fa;
+		}
+		&--second {
+			color: #001429;
+		}
+		&--third {
+			color: #043692;
+		}
+		&--fourth {
+			color: #9300f0;
+		}
+	}
+}
+
+.intro {
+	font-family: v.$base_font;
+	&__title {
+		&--nomal {
+			color: #141d83;
+			font-size: 20px;
+		}
+	}
+}
+
+.content {
+	font-family: v.$base_font;
+	&__title {
+		color: #001429;
+		&--large_blue {
+			color: #1754c6;
+		}
+	}
+}

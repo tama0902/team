@@ -2,38 +2,28 @@
 /*====================
   reset
 ====================*/
-@use 'reset/_reset';
+@use 'foundation/_reset';
 
 
 /*====================
   mixin
 ====================*/
-@use 'mixin/_mixin';
+@use 'foundation/_mixin';
 
 /*====================
   base
 ====================*/
-@use 'base/_base';
+@use 'foundation/_base';
 
 /*====================
   various
 ====================*/
-@use 'various/_various';
-
-/*====================
-  module
-====================*/
-@use 'module/_module';
-
+@use 'foundation/_various';
 
 /*====================
   page
 ====================*/
 
-// トップページ
-@use 'page/top/_firstview';
-@use 'page/top/_concept';
-@use 'page/top/feature';
-@use 'page/top/serviceMenu';
-@use 'page/top/access';
-@use 'page/top/footer';
+@use 'parts/_p-title';
+@use 'parts/_p-text';
+@use 'page/_p-baloon';
