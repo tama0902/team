@@ -1,9 +1,10 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 5 | @use 'reset/_reset';
- *   | ^^^^^^^^^^^^^^^^^^^
- *   '
- *   scss\style.scss 5:1  root stylesheet */
+/* Error: There is no module with the namespace "v".
+ *    ,
+ * 24 |     font-family: v.$base_font;
+ *    |                  ^^^^^^^^^^^^
+ *    '
+ *   scss\parts\_p-title.scss 24:15  @use
+ *   scss\style.scss 27:1            root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 5 \2502  @use 'reset/_reset';\d\a   \2502  ^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\style.scss 5:1  root stylesheet";
+  content: 'Error: There is no module with the namespace "v".\a    \2577 \a 24 \2502      font-family: v.$base_font;\d\a    \2502                   ^^^^^^^^^^^^\a    \2575 \a   scss\\parts\\_p-title.scss 24:15  @use\a   scss\\style.scss 27:1            root stylesheet';
 }
