@@ -77,7 +77,13 @@ select {
 /*====================
   font
 ====================*/
-.top__title {
+.container {
+  font-family: "源ノ角ゴシック Medium", "源ノ角ゴシック";
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.top {
   font-family: "游明朝体", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
   font-weight: normal;
   font-size: 90px;
@@ -97,6 +103,24 @@ select {
 
 .intro {
   font-family: "源ノ角ゴシック Medium", "源ノ角ゴシック";
+  width: 336px;
+  height: 216px;
+  background-color: #FFF;
+  box-shadow: 0 0 16px #00000029;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro__title {
+  text-align: center;
+}
+.intro__title--gradation {
+  font-size: 30px;
+  color: #1446ba;
+  background-image: -webkit-linear-gradient(265deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .intro__title--nomal {
   color: #141d83;
@@ -104,18 +128,29 @@ select {
 }
 .intro__text {
   font-size: 16px;
+  line-height: 26px;
+  width: 264px;
+  height: 56px;
 }
 
 .content {
   font-family: "源ノ角ゴシック Medium", "源ノ角ゴシック";
 }
+.content__tag {
+  font-size: 50px;
+  font-weight: 600;
+  color: #1754c6;
+  opacity: 0.06;
+}
 .content__title {
+  font-size: 50px;
   color: #001429;
 }
 .content__title--large {
   font-size: 60px;
 }
 .content__title--large_blue {
+  font-size: 60px;
   color: #1754c6;
 }
 

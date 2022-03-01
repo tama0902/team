@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
 
 .top {
-	&__title {
 		font-family: "游明朝体", 'Yu Mincho', 'YuMincho', 'Noto Serif JP', serif;
 		font-weight: normal;
 		font-size: 90px;
+	&__title {
 		&--first {
 			color: #00e8fa;
 		}
@@ -23,7 +23,23 @@
 
 .intro {
 	font-family: v.$base_font;
+	width: 336px;
+	height: 216px;
+	background-color: #FFF;
+	box-shadow: 0 0 16px #00000029;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	&__title {
+		text-align: center;
+		&--gradation {
+			font-size: 30px;
+			color: #1446ba;
+			background-image: -webkit-linear-gradient(265deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
 		&--nomal {
 			color: #141d83;
 			font-size: 20px;
@@ -31,16 +47,27 @@
 	}
 	&__text {
 		font-size: v.$base_size;
+		line-height: 26px;
+		width: 264px;
+		height: 56px;
 	}
 }
 
 .content {
 	font-family: v.$base_font;
+	&__tag {
+		font-size: 50px;
+		font-weight: 600;
+		color: #1754c6;
+		opacity: 0.06;
+	}
 	&__title {
+		font-size: 50px;
 		color: #001429;
 		&--large {
 			font-size: 60px;
 			&_blue {
+			font-size: 60px;
 			color: #1754c6;
 			}
 		}
