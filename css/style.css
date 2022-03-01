@@ -1,18 +1,138 @@
-/* Error: There is no module with the namespace "v".
- *    ,
- * 24 |     font-family: v.$base_font;
- *    |                  ^^^^^^^^^^^^
- *    '
- *   scss\parts\_p-title.scss 24:15  @use
- *   scss\style.scss 27:1            root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: There is no module with the namespace "v".\a    \2577 \a 24 \2502      font-family: v.$base_font;\d\a    \2502                   ^^^^^^^^^^^^\a    \2575 \a   scss\\parts\\_p-title.scss 24:15  @use\a   scss\\style.scss 27:1            root stylesheet';
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*====================
+  font
+====================*/
+.top__title {
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+  font-weight: normal;
+  font-size: 90px;
+}
+.top__title--first {
+  color: #00e8fa;
+}
+.top__title--second {
+  color: #001429;
+}
+.top__title--third {
+  color: #043692;
+}
+.top__title--fourth {
+  color: #9300f0;
+}
+
+.intro {
+  font-family: "源ノ角ゴシック Medium", "源ノ角ゴシック";
+}
+.intro__title--nomal {
+  color: #141d83;
+  font-size: 20px;
+}
+.intro__text {
+  font-size: 16px;
+}
+
+.content {
+  font-family: "源ノ角ゴシック Medium", "源ノ角ゴシック";
+}
+.content__title {
+  color: #001429;
+}
+.content__title--large {
+  font-size: 60px;
+}
+.content__title--large_blue {
+  color: #1754c6;
+}
+
+/*====================
+  reset
+====================*/
+/*====================
+  mixin
+====================*/
+/*====================
+  base
+====================*/
+/*====================
+  various
+====================*/
+/*====================
+  page
+====================*/
+
+/*# sourceMappingURL=style.css.map */

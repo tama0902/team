@@ -1,6 +1,7 @@
+@use "../foundation/various" as v;
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
-.top {
 
+.top {
 	&__title {
 		font-family: "游明朝体", 'Yu Mincho', 'YuMincho', 'Noto Serif JP', serif;
 		font-weight: normal;
@@ -28,14 +29,20 @@
 			font-size: 20px;
 		}
 	}
+	&__text {
+		font-size: v.$base_size;
+	}
 }
 
 .content {
 	font-family: v.$base_font;
 	&__title {
 		color: #001429;
-		&--large_blue {
+		&--large {
+			font-size: 60px;
+			&_blue {
 			color: #1754c6;
+			}
 		}
 	}
 }
