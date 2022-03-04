@@ -23,7 +23,6 @@
 
 .box {
 	font-family: v.$base_font;
-	width: 336px;
 	height: 216px;
 	background-color: #FFF;
 	box-shadow: 0 0 16px #00000029;
@@ -32,6 +31,28 @@
 	align-items: center;
 	&__title {
 		text-align: center;
+		padding: 2em;
+		position: relative;
+		&::before {
+			content: "";
+			width: 50px;
+			height: 60px;
+			position: absolute;
+			border-left: solid 2px #000;
+			border-top: solid 2px #000;
+			top: 0;
+			left: 0;
+		}
+		&::after {
+			content: "";
+			width: 50px;
+			height: 60px;
+			position: absolute;
+			border-right: solid 2px #000;
+			border-bottom: solid 2px #000;
+			bottom: 0;
+			right: 0;
+		}
 		&--gradation {
 			font-size: 30px;
 			color: #1446ba;
@@ -48,7 +69,6 @@
 	&__text {
 		font-size: v.$base_size;
 		line-height: 26px;
-		width: 264px;
 		height: 56px;
 	}
 }
@@ -56,23 +76,37 @@
 .intro {
 	font-family: v.$base_font;
 	&__name {
-		font-size: 48px;
+		font-family: "游明朝体", 'Yu Mincho', 'YuMincho', 'Noto Serif JP', serif;
+		font-weight: 900;
+		font-size: 90px;
 		color: #324658;
-		&--first {
-			font-size: 80px;
-			&_ash {
-			font-size: 80px;
-			color: #413DF1;
-			}
-			&_og {
-			font-size: 80px;
-			color: #9300F0;
-			}
+	}
+	&__name--ash {
+		position: relative;
+		span:nth-of-type(1){color:#44bed5}
+		span:nth-of-type(3){font-size: 48px;}
+		&::before {
+			content: "ASHIZAWA";
+			position: absolute;
+			top: 80px;
+			left: 0;
+			font-family: v.$base_font;
+			font-size: 100px;
+			font-weight: 900;
+			color: #324658;
+			opacity: 0.1;
 		}
-		&--second {
-			font-size: 80px;
-		}
-		&--en {
+	}
+	&__name--og {
+		position: relative;
+		span:nth-of-type(1){color:#44bed5}
+		span:nth-of-type(3){font-size: 48px;}
+		&::before {
+			content: "OGINO";
+			position: absolute;
+			top: 80px;
+			left: 0;
+			font-family: v.$base_font;
 			font-size: 100px;
 			font-weight: 900;
 			color: #324658;
@@ -80,12 +114,6 @@
 		}
 	}
 	&__heading {
-		width: 332px;
-		height: 56px;
-		border: 2px solid #707070;
-		box-shadow: 8px 10px 0 0 rgba(65, 61, 241, 1);
-		padding-left: 24px;
-		display: flex;
 		align-items: center;
 		&--txt {
 			color: #324658;
@@ -97,12 +125,8 @@
 				margin-left: 8px;
 			}
 		}
-		&.og {
-			box-shadow: 8px 10px 0 0 rgba(142, 0, 240, 1);
-		}
 	}
 	&__content {
-		width: 320px;
 		background-color: rgba(139, 153, 171, 0.1);
 		background-image: linear-gradient(-90deg, #fff 50%, transparent 50%),linear-gradient(#fff 50%, transparent 50%);
 		background-size: 20px 20px;
@@ -110,7 +134,6 @@
 }
 
 .voice {
-	width: 375px;
 	background-color: #413DF1;
 	color: #FFF;
 	font-family: v.$base_font;
@@ -118,13 +141,17 @@
 	z-index: -1;
 	padding: 24px 48px 48px;
 	&__title {
-		font-size: 24px;
+		font-size: 15px;
 		text-align: center;
-		&--bottom {
-			width: 80px;
-			border-bottom: 4px solid #FFF;
-			margin: 0 auto;
-			padding-top: 8px;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 10%;
+			bottom: 0;
+			left: 0;
+			border-bottom: 2px solid #fff;
+
 		}
 	}
 	&__text {
@@ -177,6 +204,28 @@
 		}
 	}
 	&__title {
+		font-size: 48px;
+		padding-top: 1.5em;
+		span:nth-of-type(2){font-size: 60px;}
+		span:nth-of-type(3){font-size: 60px; color: #1754c6;}
+		position: relative;
+		&::before {
+			content: "Introduce";
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-weight: 700;
+			color: #1754c6;
+			opacity: 0.06;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			width: 20%;
+			bottom: 0;
+			left: 0;
+			border-bottom: 4px solid #1446ba;
+		}
 		&--small {
 			font-size: 28px;
 			&_blue {
@@ -201,10 +250,8 @@
 			color: #1754c6;
 		}
 		&--bottom {
-			width: 120px;
 			border-bottom: 4px solid #1446ba;
 			&_lb {
-				width: 120px;
 				border-bottom: 4px solid #00e5f8;
 			}
 		}
@@ -238,7 +285,6 @@
 		line-height: v.$base_l-height;
 		&--title {
 			background-color: #324658 ;
-			width: 144px;
 			height: 144px;
 			color: #FFF;
 			font-size: 20px;
@@ -247,7 +293,6 @@
 			align-items: center;
 		}
 		&--txt {
-			width: 280px;
 			padding: 40px 24px 24px;
 		}
 	}
@@ -269,7 +314,6 @@
 	font-family: v.$base_font;
 	background-color: #413DF1;
 	border-radius: 16px;
-	width: 352px;
 	padding: 0 8px;
 	&__list {
 		background-color: #d3d2fc;
