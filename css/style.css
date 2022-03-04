@@ -103,7 +103,6 @@ select {
 
 .box {
   font-family: "源ノ角ゴシック Medium", "源ノ角ゴシック";
-  width: 336px;
   height: 216px;
   background-color: #FFF;
   box-shadow: 0 0 16px #00000029;
@@ -113,6 +112,28 @@ select {
 }
 .box__title {
   text-align: center;
+  padding: 2em;
+  position: relative;
+}
+.box__title::before {
+  content: "";
+  width: 50px;
+  height: 60px;
+  position: absolute;
+  border-left: solid 2px #000;
+  border-top: solid 2px #000;
+  top: 0;
+  left: 0;
+}
+.box__title::after {
+  content: "";
+  width: 50px;
+  height: 60px;
+  position: absolute;
+  border-right: solid 2px #000;
+  border-bottom: solid 2px #000;
+  bottom: 0;
+  right: 0;
 }
 .box__title--gradation {
   font-size: 30px;
@@ -129,7 +150,6 @@ select {
 .box__text {
   font-size: 16px;
   line-height: 26px;
-  width: 264px;
   height: 56px;
 }
 
@@ -137,36 +157,52 @@ select {
   font-family: "源ノ角ゴシック Medium", "源ノ角ゴシック";
 }
 .intro__name {
-  font-size: 48px;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+  font-weight: 900;
+  font-size: 90px;
   color: #324658;
 }
-.intro__name--first {
-  font-size: 80px;
+.intro__name--ash {
+  position: relative;
 }
-.intro__name--first_ash {
-  font-size: 80px;
-  color: #413DF1;
+.intro__name--ash span:nth-of-type(1) {
+  color: #44bed5;
 }
-.intro__name--first_og {
-  font-size: 80px;
-  color: #9300F0;
+.intro__name--ash span:nth-of-type(3) {
+  font-size: 48px;
 }
-.intro__name--second {
-  font-size: 80px;
+.intro__name--ash::before {
+  content: "ASHIZAWA";
+  position: absolute;
+  top: 80px;
+  left: 0;
+  font-family: "源ノ角ゴシック Medium", "源ノ角ゴシック";
+  font-size: 100px;
+  font-weight: 900;
+  color: #324658;
+  opacity: 0.1;
 }
-.intro__name--en {
+.intro__name--og {
+  position: relative;
+}
+.intro__name--og span:nth-of-type(1) {
+  color: #44bed5;
+}
+.intro__name--og span:nth-of-type(3) {
+  font-size: 48px;
+}
+.intro__name--og::before {
+  content: "OGINO";
+  position: absolute;
+  top: 80px;
+  left: 0;
+  font-family: "源ノ角ゴシック Medium", "源ノ角ゴシック";
   font-size: 100px;
   font-weight: 900;
   color: #324658;
   opacity: 0.1;
 }
 .intro__heading {
-  width: 332px;
-  height: 56px;
-  border: 2px solid #707070;
-  box-shadow: 8px 10px 0 0 #413df1;
-  padding-left: 24px;
-  display: flex;
   align-items: center;
 }
 .intro__heading--txt {
@@ -179,18 +215,13 @@ select {
   font-weight: 500;
   margin-left: 8px;
 }
-.intro__heading.og {
-  box-shadow: 8px 10px 0 0 #8e00f0;
-}
 .intro__content {
-  width: 320px;
   background-color: rgba(139, 153, 171, 0.1);
   background-image: linear-gradient(-90deg, #fff 50%, transparent 50%), linear-gradient(#fff 50%, transparent 50%);
   background-size: 20px 20px;
 }
 
 .voice {
-  width: 375px;
   background-color: #413DF1;
   color: #FFF;
   font-family: "源ノ角ゴシック Medium", "源ノ角ゴシック";
@@ -199,14 +230,17 @@ select {
   padding: 24px 48px 48px;
 }
 .voice__title {
-  font-size: 24px;
+  font-size: 15px;
   text-align: center;
+  position: relative;
 }
-.voice__title--bottom {
-  width: 80px;
-  border-bottom: 4px solid #FFF;
-  margin: 0 auto;
-  padding-top: 8px;
+.voice__title::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid #fff;
 }
 .voice__text {
   line-height: 28px;
@@ -256,6 +290,35 @@ select {
   color: #FFF;
   opacity: 0.6;
 }
+.wrapper__title {
+  font-size: 48px;
+  padding-top: 1.5em;
+  position: relative;
+}
+.wrapper__title span:nth-of-type(2) {
+  font-size: 60px;
+}
+.wrapper__title span:nth-of-type(3) {
+  font-size: 60px;
+  color: #1754c6;
+}
+.wrapper__title::before {
+  content: "Introduce";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 700;
+  color: #1754c6;
+  opacity: 0.06;
+}
+.wrapper__title::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  bottom: 0;
+  left: 0;
+  border-bottom: 4px solid #1446ba;
+}
 .wrapper__title--small {
   font-size: 28px;
 }
@@ -280,11 +343,9 @@ select {
   color: #1754c6;
 }
 .wrapper__title--bottom {
-  width: 120px;
   border-bottom: 4px solid #1446ba;
 }
 .wrapper__title--bottom_lb {
-  width: 120px;
   border-bottom: 4px solid #00e5f8;
 }
 
@@ -317,7 +378,6 @@ select {
 }
 .point__list--title {
   background-color: #324658;
-  width: 144px;
   height: 144px;
   color: #FFF;
   font-size: 20px;
@@ -326,7 +386,6 @@ select {
   align-items: center;
 }
 .point__list--txt {
-  width: 280px;
   padding: 40px 24px 24px;
 }
 .point ._01 {
@@ -347,7 +406,6 @@ select {
   font-family: "源ノ角ゴシック Medium", "源ノ角ゴシック";
   background-color: #413DF1;
   border-radius: 16px;
-  width: 352px;
   padding: 0 8px;
 }
 .questionGroup__list {
