@@ -1,6 +1,8 @@
 @use "../foundation/various" as v;
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
-
+body {
+	counter-reset: number;
+}
 .top {
 		font-family: "游明朝体", 'Yu Mincho', 'YuMincho', 'Noto Serif JP', serif;
 		font-weight: normal;
@@ -54,7 +56,7 @@
 		}
 		&--gradation {
 			font-size: 30px;
-			color: #FFF;
+			color: #c6f21f;
 		}
 		&--nomal {
 			color: #FFF;
@@ -78,7 +80,7 @@
 	}
 	&__name--ash {
 		position: relative;
-		span:nth-of-type(1){color:#44bed5}
+		span:nth-of-type(1){color:#446fc8}
 		span:nth-of-type(3){font-size: 48px;}
 		&::before {
 			content: "ASHIZAWA";
@@ -94,7 +96,7 @@
 	}
 	&__name--og {
 		position: relative;
-		span:nth-of-type(1){color:#44bed5}
+		span:nth-of-type(1){color:#446fc8}
 		span:nth-of-type(3){font-size: 48px;}
 		&::before {
 			content: "OGINO";
@@ -218,7 +220,7 @@
 			width: 20%;
 			bottom: 0;
 			left: 50%;
-			border-bottom: 2px solid #808EA0;
+			border-bottom: 2px solid #BEF33B;
 		}
 		&--small {
 			font-size: 28px;
@@ -281,9 +283,31 @@
 	&__list {
 		line-height: v.$base_l-height;
 		&--title {
+			position: relative;
 			color: #141d83;
 			font-size: 18px;
 			line-height: 26px;
+			counter-increment: number;
+			&::before {
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				content: counter(number, decimal-leading-zero);
+				font-size: 30px;
+				font-weight: 900;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 72px;
+				background: linear-gradient(50deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+				background: -webkit-linear-gradient(40deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				width: 72px;
+				height: 72px;
+				background-color: red;
+			}
 		}
 		&--txt {
 			color: #141d83;
@@ -293,12 +317,36 @@
 		}
 	}
 }
+.arc-wrapper {
+	position: relative;
+	margin: 20px;
+}
+.arc {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	border: 1px solid;
+	border: 1px solid;
+	border-color: red;
+}
+.arc_start {
+	border-color: red transparent;
+	transform: rotate(45deg);
+}
+.arc_end {
+	border-color: transparent red red red;
+	transform: rotate(135deg);
+}
 
 .question {
 	font-family: v.$base_font;
 	background-color: #44bed5;
 }
 .questionList {
+	list-style: none;
 	background-color: #FFF;
 	border-radius: 16px;
 	padding: 16px;
@@ -306,16 +354,41 @@
 		color: #446fc8;
 	}
 }
-.questionGroup {
+
+.contact {
 	font-family: v.$base_font;
-	background-color: #413DF1;
-	border-radius: 16px;
-	padding: 0 8px;
-	&__list {
-		background-color: #d3d2fc;
-		border-radius: 16px;
-		padding: 16px 8px 32px;
+	color: v.$base_color;
+	background-color: #324658;
+	&__lead {
+		background-color: #c6f21f;
+		font-weight: 700;
+		padding: 8px 16px;
+	}
+	&__unit {
+		&--title {
+			font-weight: 600;
+			color: #FFF;
+			font-size: 24px;
+			line-height: 32px;
+		}
+		&--text {
+			color: #FFF;
+			font-weight: 500;
+		}
+	}
 	
+}
+
+.how {
+	background-color: #3A61BD;
+	&__lead {
+		color: #FFF;
+	}
+	&__box {
+		border: 2px solid #FFF;
+		border-radius: 8px;
+		padding: 64px 24px;
+		color: #FFF;
 	}
 }
 /*
