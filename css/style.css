@@ -103,12 +103,11 @@ select {
 
 .box {
   font-family: "源ノ角ゴシック Medium", "源ノ角ゴシック";
-  height: 216px;
-  background-color: #FFF;
-  box-shadow: 0 0 16px #00000029;
+  background-color: #001429;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 24px;
 }
 .box__title {
   text-align: center;
@@ -120,8 +119,8 @@ select {
   width: 50px;
   height: 60px;
   position: absolute;
-  border-left: solid 2px #000;
-  border-top: solid 2px #000;
+  border-left: solid 2px #FFF;
+  border-top: solid 2px #FFF;
   top: 0;
   left: 0;
 }
@@ -130,27 +129,23 @@ select {
   width: 50px;
   height: 60px;
   position: absolute;
-  border-right: solid 2px #000;
-  border-bottom: solid 2px #000;
+  border-right: solid 2px #FFF;
+  border-bottom: solid 2px #FFF;
   bottom: 0;
   right: 0;
 }
 .box__title--gradation {
   font-size: 30px;
-  color: #1446ba;
-  background-image: -webkit-linear-gradient(265deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #FFF;
 }
 .box__title--nomal {
-  color: #141d83;
+  color: #FFF;
   font-size: 20px;
 }
 .box__text {
+  color: #FFF;
   font-size: 16px;
   line-height: 26px;
-  height: 56px;
 }
 
 .intro {
@@ -206,9 +201,10 @@ select {
   align-items: center;
 }
 .intro__heading--txt {
-  color: #324658;
+  color: #FFF;
   font-size: 24px;
   font-weight: 900;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 .intro__heading--txt span {
   font-size: 18px;
@@ -219,6 +215,10 @@ select {
   background-color: rgba(139, 153, 171, 0.1);
   background-image: linear-gradient(-90deg, #fff 50%, transparent 50%), linear-gradient(#fff 50%, transparent 50%);
   background-size: 20px 20px;
+}
+.intro__box {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 16px 24px;
 }
 
 .voice {
@@ -281,17 +281,8 @@ select {
   font-size: 50px;
   color: #001429;
 }
-.wrapper__tag {
-  font-weight: 700;
-  color: #1754c6;
-  opacity: 0.06;
-}
-.wrapper__tag--q {
-  color: #FFF;
-  opacity: 0.6;
-}
 .wrapper__title {
-  font-size: 48px;
+  font-size: 20px;
   padding-top: 1.5em;
   position: relative;
 }
@@ -307,17 +298,19 @@ select {
   position: absolute;
   top: 0;
   left: 0;
-  font-weight: 700;
-  color: #1754c6;
-  opacity: 0.06;
+  font-size: 30px;
+  font-family: trajan-pro-3, serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #324658;
 }
 .wrapper__title::after {
   content: "";
   position: absolute;
   width: 20%;
   bottom: 0;
-  left: 0;
-  border-bottom: 4px solid #1446ba;
+  left: 50%;
+  border-bottom: 2px solid #808EA0;
 }
 .wrapper__title--small {
   font-size: 28px;
@@ -373,33 +366,36 @@ select {
 .point__content {
   line-height: 28px;
 }
+.point__content--txt {
+  padding: 32px 24px 24px;
+}
 .point__list {
   line-height: 28px;
 }
 .point__list--title {
-  background-color: #324658;
-  height: 144px;
-  color: #FFF;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #141d83;
+  font-size: 18px;
+  line-height: 26px;
 }
 .point__list--txt {
+  color: #141d83;
+  font-size: 15px;
+  line-height: 23px;
   padding: 40px 24px 24px;
-}
-.point ._01 {
-  background-color: rgba(0, 252, 250, 0.08);
-}
-.point ._02 {
-  background-color: rgba(65, 61, 241, 0.08);
-}
-.point ._03 {
-  background-color: rgba(147, 0, 240, 0.08);
 }
 
 .question {
   font-family: "源ノ角ゴシック Medium", "源ノ角ゴシック";
+  background-color: #44bed5;
+}
+
+.questionList {
+  background-color: #FFF;
+  border-radius: 16px;
+  padding: 16px;
+}
+.questionList__title {
+  color: #446fc8;
 }
 
 .questionGroup {

@@ -23,12 +23,11 @@
 
 .box {
 	font-family: v.$base_font;
-	height: 216px;
-	background-color: #FFF;
-	box-shadow: 0 0 16px #00000029;
+	background-color: #001429;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 24px;
 	&__title {
 		text-align: center;
 		padding: 2em;
@@ -38,8 +37,8 @@
 			width: 50px;
 			height: 60px;
 			position: absolute;
-			border-left: solid 2px #000;
-			border-top: solid 2px #000;
+			border-left: solid 2px #FFF;
+			border-top: solid 2px #FFF;
 			top: 0;
 			left: 0;
 		}
@@ -48,28 +47,24 @@
 			width: 50px;
 			height: 60px;
 			position: absolute;
-			border-right: solid 2px #000;
-			border-bottom: solid 2px #000;
+			border-right: solid 2px #FFF;
+			border-bottom: solid 2px #FFF;
 			bottom: 0;
 			right: 0;
 		}
 		&--gradation {
 			font-size: 30px;
-			color: #1446ba;
-			background-image: -webkit-linear-gradient(265deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
-			background-clip: text;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
+			color: #FFF;
 		}
 		&--nomal {
-			color: #141d83;
+			color: #FFF;
 			font-size: 20px;
 		}
 	}
 	&__text {
+		color: #FFF;
 		font-size: v.$base_size;
 		line-height: 26px;
-		height: 56px;
 	}
 }
 
@@ -116,9 +111,10 @@
 	&__heading {
 		align-items: center;
 		&--txt {
-			color: #324658;
+			color: #FFF;
 			font-size: 24px;
 			font-weight: 900;
+			text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 			span {
 				font-size: 18px;
 				font-weight: 500;
@@ -130,6 +126,11 @@
 		background-color: rgba(139, 153, 171, 0.1);
 		background-image: linear-gradient(-90deg, #fff 50%, transparent 50%),linear-gradient(#fff 50%, transparent 50%);
 		background-size: 20px 20px;
+	}
+	&__box {
+		background-color: rgba(255, 255, 255, 0.5);
+		padding: 16px 24px;
+
 	}
 }
 
@@ -194,17 +195,8 @@
 	font-family: v.$base_font;
 	font-size: 50px;
 	color: v.$base_color;
-	&__tag {
-		font-weight: 700;
-		color: #1754c6;
-		opacity: 0.06;
-		&--q {
-			color: #FFF;
-			opacity: 0.6;
-		}
-	}
 	&__title {
-		font-size: 48px;
+		font-size: 20px;
 		padding-top: 1.5em;
 		span:nth-of-type(2){font-size: 60px;}
 		span:nth-of-type(3){font-size: 60px; color: #1754c6;}
@@ -214,17 +206,19 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			font-weight: 700;
-			color: #1754c6;
-			opacity: 0.06;
+			font-size: 30px;
+			font-family: trajan-pro-3,serif;
+			font-weight: 400;
+			font-style: normal;
+			color: #324658;
 		}
 		&::after {
 			content: "";
 			position: absolute;
 			width: 20%;
 			bottom: 0;
-			left: 0;
-			border-bottom: 4px solid #1446ba;
+			left: 50%;
+			border-bottom: 2px solid #808EA0;
 		}
 		&--small {
 			font-size: 28px;
@@ -280,35 +274,37 @@
 	}
 	&__content {
 		line-height: v.$base_l-height;
+		&--txt {
+			padding: 32px 24px 24px;
+		}
 	}
 	&__list {
 		line-height: v.$base_l-height;
 		&--title {
-			background-color: #324658 ;
-			height: 144px;
-			color: #FFF;
-			font-size: 20px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			color: #141d83;
+			font-size: 18px;
+			line-height: 26px;
 		}
 		&--txt {
+			color: #141d83;
+			font-size: 15px;
+			line-height: 23px;
 			padding: 40px 24px 24px;
 		}
-	}
-	._01 {
-		background-color: rgba(0, 252, 250, 0.08) ;
-	}
-	._02 {
-		background-color: rgba(65, 61, 241, 0.08) ;
-	}
-	._03 {
-		background-color: rgba(147, 0, 240, 0.08) ;
 	}
 }
 
 .question {
 	font-family: v.$base_font;
+	background-color: #44bed5;
+}
+.questionList {
+	background-color: #FFF;
+	border-radius: 16px;
+	padding: 16px;
+	&__title {
+		color: #446fc8;
+	}
 }
 .questionGroup {
 	font-family: v.$base_font;
