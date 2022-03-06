@@ -298,6 +298,20 @@ body {
   color: #1754c6;
 }
 .wrapper__title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 72px;
+  top: 0;
+  left: 0;
+  --gradient: linear-gradient(50deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+  background-image: var(--gradient);
+  transform: skew(-38deg);
+}
+.wrapper__title--intro {
+  position: relative;
+}
+.wrapper__title--intro::before {
   content: "Introduce";
   position: absolute;
   top: 0;
@@ -307,6 +321,65 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #324658;
+}
+.wrapper__title--point {
+  position: relative;
+}
+.wrapper__title--point::before {
+  content: "Point";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  font-family: trajan-pro-3, serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #324658;
+}
+.wrapper__title--question {
+  position: relative;
+  color: #FFF;
+}
+.wrapper__title--question::before {
+  content: "Question";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  font-family: trajan-pro-3, serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFF;
+}
+.wrapper__title--contact {
+  position: relative;
+  color: #FFF;
+}
+.wrapper__title--contact::before {
+  content: "Contact";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  font-family: trajan-pro-3, serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFF;
+}
+.wrapper__title--how {
+  position: relative;
+  color: #FFF;
+}
+.wrapper__title--how::before {
+  content: "How";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  font-family: trajan-pro-3, serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFF;
 }
 .wrapper__title::after {
   content: "";
@@ -471,6 +544,28 @@ body {
 .contact__unit--text {
   color: #FFF;
   font-weight: 500;
+  position: relative;
+  padding: 1em;
+}
+.contact__unit--text::before {
+  content: "";
+  width: 50px;
+  height: 60px;
+  position: absolute;
+  border-left: solid 2px #FFF;
+  border-top: solid 2px #FFF;
+  top: 0;
+  left: 0;
+}
+.contact__unit--text::after {
+  content: "";
+  width: 50px;
+  height: 60px;
+  position: absolute;
+  border-right: solid 2px #FFF;
+  border-bottom: solid 2px #FFF;
+  bottom: 0;
+  right: 0;
 }
 
 .how {
@@ -484,6 +579,41 @@ body {
   border-radius: 8px;
   padding: 64px 24px;
   color: #FFF;
+}
+
+.conversion__lead {
+  background-color: #c6f21f;
+  font-weight: 700;
+  padding: 8px 16px;
+}
+.conversion__text {
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+  font-weight: normal;
+  font-size: 20px;
+}
+.conversion__text--lg {
+  font-size: 40px;
+  font-weight: 900;
+}
+.conversion__last--text {
+  font-family: "源ノ角ゴシック Medium", "源ノ角ゴシック";
+  font-size: 16px;
+  line-height: 28px;
+  color: #001429;
+  text-align: center;
+}
+.conversion__last--button {
+  text-align: center;
+  border: 4px solid #38b6ce;
+  border-radius: 16px;
+  padding: 24px 48px;
+}
+.conversion__last--link {
+  font-size: 24px;
+  letter-spacing: 2.4px;
+  font-weight: 700;
+  color: #44bed5;
+  text-decoration: none;
 }
 
 /*
