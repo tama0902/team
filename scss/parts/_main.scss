@@ -203,16 +203,90 @@ body {
 		span:nth-of-type(2){font-size: 60px;}
 		span:nth-of-type(3){font-size: 60px; color: #1754c6;}
 		position: relative;
+
 		&::before {
-			content: "Introduce";
+			content: "";
 			position: absolute;
+			width: 10px;
+			height: 72px;
 			top: 0;
 			left: 0;
-			font-size: 30px;
-			font-family: trajan-pro-3,serif;
-			font-weight: 400;
-			font-style: normal;
-			color: #324658;
+			--gradient: linear-gradient(50deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+			background-image: var(--gradient);
+			transform: skew(-38deg);
+		}
+		&--intro {
+			position: relative;
+			&::before {
+				content: "Introduce";
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-size: 30px;
+				font-family: trajan-pro-3,serif;
+				font-weight: 400;
+				font-style: normal;
+				color: #324658;
+			}
+		}
+		&--point {
+			position: relative;
+			&::before {
+				content: "Point";
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-size: 30px;
+				font-family: trajan-pro-3,serif;
+				font-weight: 400;
+				font-style: normal;
+				color: #324658;
+			}
+		}
+		&--question {
+			position: relative;
+			color: #FFF;
+			&::before {
+				content: "Question";
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-size: 30px;
+				font-family: trajan-pro-3,serif;
+				font-weight: 400;
+				font-style: normal;
+				color: #FFF;
+			}
+		}
+		&--contact {
+			position: relative;
+			color: #FFF;
+			&::before {
+				content: "Contact";
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-size: 30px;
+				font-family: trajan-pro-3,serif;
+				font-weight: 400;
+				font-style: normal;
+				color: #FFF;
+			}
+		}
+		&--how {
+			position: relative;
+			color: #FFF;
+			&::before {
+				content: "How";
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-size: 30px;
+				font-family: trajan-pro-3,serif;
+				font-weight: 400;
+				font-style: normal;
+				color: #FFF;
+			}
 		}
 		&::after {
 			content: "";
@@ -374,6 +448,28 @@ body {
 		&--text {
 			color: #FFF;
 			font-weight: 500;
+			position: relative;
+			padding: 1em;
+			&::before {
+				content: "";
+				width: 50px;
+				height: 60px;
+				position: absolute;
+				border-left: solid 2px #FFF;
+				border-top: solid 2px #FFF;
+				top: 0;
+				left: 0;
+			}
+			&::after {
+				content: "";
+				width: 50px;
+				height: 60px;
+				position: absolute;
+				border-right: solid 2px #FFF;
+				border-bottom: solid 2px #FFF;
+				bottom: 0;
+				right: 0;
+			}
 		}
 	}
 	
@@ -389,6 +485,45 @@ body {
 		border-radius: 8px;
 		padding: 64px 24px;
 		color: #FFF;
+	}
+}
+
+.conversion {
+	&__lead {
+		background-color: #c6f21f;
+		font-weight: 700;
+		padding: 8px 16px;
+	}
+	&__text {
+		font-family: "游明朝体", 'Yu Mincho', 'YuMincho', 'Noto Serif JP', serif;
+		font-weight: normal;
+		font-size: 20px;
+		&--lg {
+			font-size: 40px;
+			font-weight: 900;
+		}
+	}
+	&__last {
+		&--text {
+			font-family: v.$base_font;
+			font-size: v.$base_size;
+			line-height: v.$base_l-height;
+			color: v.$base_color;
+			text-align: center;
+		}
+		&--button {
+			text-align: center;
+			border: 4px solid #38b6ce;
+			border-radius: 16px;
+			padding: 24px 48px;
+		}
+		&--link {
+			font-size: 24px;
+			letter-spacing: 2.4px;
+			font-weight: 700;
+			color: #44bed5;
+			text-decoration: none;
+		}
 	}
 }
 /*
@@ -435,5 +570,3 @@ body {
 						30px 30px #333;
 }
 */
-
-
