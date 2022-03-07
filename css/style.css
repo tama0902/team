@@ -160,17 +160,26 @@ body {
   font-weight: 900;
   font-size: 90px;
   color: #324658;
-}
-.intro__name--ash {
+  height: 90px;
   position: relative;
 }
-.intro__name--ash span:nth-of-type(1) {
+.intro__ash {
+  position: relative;
+}
+.intro__ash span:nth-of-type(1) {
   color: #446fc8;
 }
-.intro__name--ash span:nth-of-type(3) {
-  font-size: 48px;
+.intro__ash span:nth-of-type(2) {
+  position: absolute;
+  left: 90px;
 }
-.intro__name--ash::before {
+.intro__ash span:nth-of-type(3) {
+  font-size: 48px;
+  position: absolute;
+  top: 15px;
+  left: 180px;
+}
+.intro__ash::before {
   content: "ASHIZAWA";
   position: absolute;
   top: 80px;
@@ -181,16 +190,35 @@ body {
   color: #324658;
   opacity: 0.1;
 }
-.intro__name--og {
+.intro__ash--first {
   position: relative;
 }
-.intro__name--og span:nth-of-type(1) {
+.intro__ash--first::before {
+  content: "アッシー";
+  position: absolute;
+  font-family: "源ノ角ゴシック Medium", "源ノ角ゴシック";
+  font-size: 20px;
+  color: #446fc8;
+  bottom: -20px;
+  left: 15px;
+}
+.intro__og {
+  position: relative;
+}
+.intro__og span:nth-of-type(1) {
   color: #446fc8;
 }
-.intro__name--og span:nth-of-type(3) {
-  font-size: 48px;
+.intro__og span:nth-of-type(2) {
+  position: absolute;
+  left: 90px;
 }
-.intro__name--og::before {
+.intro__og span:nth-of-type(3) {
+  font-size: 48px;
+  position: absolute;
+  top: 15px;
+  left: 180px;
+}
+.intro__og::before {
   content: "OGINO";
   position: absolute;
   top: 80px;
@@ -200,6 +228,18 @@ body {
   font-weight: 900;
   color: #324658;
   opacity: 0.1;
+}
+.intro__og--first {
+  position: relative;
+}
+.intro__og--first::before {
+  content: "おぎーの";
+  position: absolute;
+  font-family: "源ノ角ゴシック Medium", "源ノ角ゴシック";
+  font-size: 20px;
+  color: #446fc8;
+  bottom: -20px;
+  left: 8px;
 }
 .intro__heading {
   align-items: center;
@@ -289,6 +329,8 @@ body {
   font-size: 20px;
   padding-top: 1.5em;
   position: relative;
+  margin: 0 auto;
+  width: 100%;
 }
 .wrapper__title span:nth-of-type(2) {
   font-size: 60px;
@@ -297,88 +339,19 @@ body {
   font-size: 60px;
   color: #1754c6;
 }
-.wrapper__title::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 72px;
-  top: 0;
-  left: 0;
-  --gradient: linear-gradient(50deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
-  background-image: var(--gradient);
-  transform: skew(-38deg);
-}
-.wrapper__title--intro {
-  position: relative;
-}
-.wrapper__title--intro::before {
-  content: "Introduce";
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 30px;
-  font-family: trajan-pro-3, serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #324658;
-}
 .wrapper__title--point {
   position: relative;
 }
-.wrapper__title--point::before {
-  content: "Point";
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 30px;
-  font-family: trajan-pro-3, serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #324658;
-}
 .wrapper__title--question {
   position: relative;
-  color: #FFF;
-}
-.wrapper__title--question::before {
-  content: "Question";
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 30px;
-  font-family: trajan-pro-3, serif;
-  font-weight: 400;
-  font-style: normal;
   color: #FFF;
 }
 .wrapper__title--contact {
   position: relative;
   color: #FFF;
 }
-.wrapper__title--contact::before {
-  content: "Contact";
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 30px;
-  font-family: trajan-pro-3, serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FFF;
-}
 .wrapper__title--how {
   position: relative;
-  color: #FFF;
-}
-.wrapper__title--how::before {
-  content: "How";
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 30px;
-  font-family: trajan-pro-3, serif;
-  font-weight: 400;
-  font-style: normal;
   color: #FFF;
 }
 .wrapper__title::after {
@@ -451,15 +424,27 @@ body {
 }
 .point__list--title {
   position: relative;
+  font-family: futura-pt-bold, sans-serif;
   color: #141d83;
   font-size: 18px;
   line-height: 26px;
+  display: flex;
   counter-increment: number;
 }
 .point__list--title::before {
+  content: "";
+  width: 4.8em;
+  height: 4.8em;
+  background: url(../../team/img/point_number.png) no-repeat;
+  background-size: contain;
+  display: inline-block;
+  margin-top: -30px;
+  margin-right: 10px;
+}
+.point__list--title::after {
   position: absolute;
   display: block;
-  top: 0;
+  top: -30px;
   left: 0;
   content: counter(number, decimal-leading-zero);
   font-size: 30px;
@@ -474,7 +459,6 @@ body {
   -webkit-text-fill-color: transparent;
   width: 72px;
   height: 72px;
-  background-color: red;
 }
 .point__list--txt {
   color: #141d83;
@@ -540,6 +524,22 @@ body {
   color: #FFF;
   font-size: 24px;
   line-height: 32px;
+  position: relative;
+  counter-increment: c-number;
+  display: flex;
+  justify-content: center;
+}
+.contact__unit--title::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  content: counter(c-number);
+  font-family: futura-pt-bold, sans-serif;
+  font-size: 130px;
+  font-weight: 900;
+  opacity: 0.24;
 }
 .contact__unit--text {
   color: #FFF;
@@ -549,11 +549,13 @@ body {
 }
 .contact__unit--text::before {
   content: "";
-  width: 50px;
-  height: 60px;
+  width: 56px;
+  height: 120px;
   position: absolute;
-  border-left: solid 2px #FFF;
-  border-top: solid 2px #FFF;
+  border-left: solid 2px;
+  border-top: solid 2px;
+  background: linear-gradient(50deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+  background: -webkit-linear-gradient(40deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
   top: 0;
   left: 0;
 }
