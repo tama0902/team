@@ -100,7 +100,7 @@ body {
 	&__ash--first {
 		position: relative;
 		&::before {
-			content: "アッシー";
+			content: "あっしー";
 			position: absolute;
 			font-family: v.$base_font;
 			font-size: 20px;
@@ -151,6 +151,9 @@ body {
 				font-weight: 500;
 				margin-left: 8px;
 			}
+		}
+		&--number {
+			display: inline;
 		}
 	}
 	&__content {
@@ -364,29 +367,6 @@ body {
 		}
 	}
 }
-.arc-wrapper {
-	position: relative;
-	margin: 20px;
-}
-.arc {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100px;
-	height: 100px;
-	border-radius: 100%;
-	border: 1px solid;
-	border: 1px solid;
-	border-color: red;
-}
-.arc_start {
-	border-color: red transparent;
-	transform: rotate(45deg);
-}
-.arc_end {
-	border-color: transparent red red red;
-	transform: rotate(135deg);
-}
 
 .question {
 	font-family: v.$base_font;
@@ -399,7 +379,42 @@ body {
 	padding: 16px;
 	&__title {
 		color: #446fc8;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 58px;
+			height: 8px;
+			border-bottom: 1px solid #3A61BD;
+			border-right: 1px solid #3A61BD;
+			transform: skew(45deg);
+			bottom: 0;
+			right: 0;
+			pointer-events: none;
+		}
 	}
+}
+.modal {
+	display: none;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.modal__bg {
+	background: rgba(0, 0, 0, 0.8);
+	height: 100vh;
+	position: absolute;
+	width: 100%;
+}
+.modal__content {
+	background-color: #FFF;
+	left: 50%;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 60%;
 }
 
 .contact {
@@ -444,20 +459,24 @@ body {
 				width: 56px;
 				height:120px;
 				position: absolute;
-				border-left: solid 2px;
-				border-top: solid 2px;
-				background: linear-gradient(50deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
-				background: -webkit-linear-gradient(40deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+				border-left: solid 5px #FFF;
+				border-top: solid 5px #FFF;
+				border-image: linear-gradient(50deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+				border-image: -webkit-linear-gradient(40deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+				border-image-slice: 1;
 				top: 0;
 				left: 0;
 			}
 			&::after {
 				content: "";
-				width: 50px;
-				height: 60px;
+				width: 56px;
+				height:120px;
 				position: absolute;
-				border-right: solid 2px #FFF;
-				border-bottom: solid 2px #FFF;
+				border-right: solid 5px #FFF;
+				border-bottom: solid 5px #FFF;
+				border-image: linear-gradient(50deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+				border-image: -webkit-linear-gradient(40deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+				border-image-slice: 1;
 				bottom: 0;
 				right: 0;
 			}
