@@ -1,8 +1,5 @@
 @use "../foundation/various" as v;
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
-body {
-	counter-reset: number;
-}
 .top {
 		font-family: "游明朝体", 'Yu Mincho', 'YuMincho', 'Noto Serif JP', serif;
 		font-weight: normal;
@@ -72,13 +69,30 @@ body {
 
 .intro {
 	font-family: v.$base_font;
+	&__teacher {
+		background-color: #f0f0f0;
+		position: relative;
+		z-index: 0;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 100px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			transform: skewY(-7deg);
+			z-index: -1;
+			background-color: #324658;
+		}
+	}
 	&__name {
 		font-family: "游明朝体", 'Yu Mincho', 'YuMincho', 'Noto Serif JP', serif;
 		font-weight: 900;
 		font-size: 90px;
 		color: #324658;
 		height: 90px;
-		position: relative;
+		position: absolute;
+		top: -50px;
 	}
 	&__ash {
 		position: relative;
@@ -162,7 +176,7 @@ body {
 		background-size: 20px 20px;
 	}
 	&__box {
-		background-color: rgba(255, 255, 255, 0.5);
+		background-color: rgba(255, 255, 255, 0.85);
 		padding: 16px 24px;
 
 	}
@@ -183,8 +197,11 @@ body {
 			content: "";
 			position: absolute;
 			width: 10%;
+			top: 0;
 			bottom: 0;
 			left: 0;
+			right: 0;
+			margin: 2em auto ;
 			border-bottom: 2px solid #fff;
 
 		}
@@ -193,7 +210,7 @@ body {
 		line-height: v.$base_l-height;
 		position: relative;
 		padding: 24px 16px;
-		margin: 1em 0;
+		margin: 2em 0;
 		top: 0;
 		&::before {
 			position: absolute;
@@ -321,6 +338,7 @@ body {
 	}
 	&__list {
 		line-height: v.$base_l-height;
+		counter-reset: number;
 		&--title {
 			position: relative;
 			font-family: futura-pt-bold,sans-serif;
@@ -422,32 +440,58 @@ body {
 	color: v.$base_color;
 	background-color: #324658;
 	&__lead {
-		background-color: #c6f21f;
 		font-weight: 700;
-		padding: 8px 16px;
+		 span {
+			background-color: #c6f21f;
+			padding: 8px 16px;
+			display: inline-block;
+			margin-bottom: 8px;
+		 }
 	}
-	&__unit {
-		&--title {
-			font-weight: 600;
-			color: #FFF;
-			font-size: 24px;
-			line-height: 32px;
+	&__list {
+		counter-reset: l-number;
+		counter-reset: r-number 3;
+		&--l {
 			position: relative;
-			counter-increment: c-number;
-			display: flex;
-			justify-content: center;
+			counter-increment: l-number;
 			&::before {
 				content: "";
 				position: absolute;
 				display: block;
 				top: 0;
 				left: 0;
-				content: counter(c-number);
+				content: counter(l-number);
 				font-family: futura-pt-bold,sans-serif;
+				color: #FFF;
 				font-size: 130px;
 				font-weight: 900;
 				opacity: 0.24;
 			}
+		}
+		&--r {
+			position: relative;
+			counter-increment: r-number;
+			&::before {
+				content: "";
+				position: absolute;
+				display: block;
+				top: 0;
+				right: 0;
+				content: counter(r-number);
+				font-family: futura-pt-bold,sans-serif;
+				color: #FFF;
+				font-size: 130px;
+				font-weight: 900;
+				opacity: 0.24;
+			}
+		}
+		&--title {
+			font-weight: 600;
+			color: #FFF;
+			font-size: 24px;
+			line-height: 32px;
+			display: flex;
+			justify-content: center;
 		}
 		&--text {
 			color: #FFF;
