@@ -1,5 +1,57 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap");
+.container--guide .container__wrapper {
+  border: dotted 1px cyan;
+}
+.container--guide .layout1 {
+  border: dashed 1px #E60012;
+  background: rgba(230, 0, 18, 0.1);
+}
+.container--guide .layout2 {
+  border: dashed 1px #f39800;
+  background: rgba(243, 152, 80, 0.1);
+}
+.container--guide .layout3 {
+  border: dashed 1px #FFF100;
+  background: rgba(255, 251, 80, 0.1);
+}
+.container--guide .layout4 {
+  border: dashed 1px #8FC31F;
+  background: rgba(143, 195, 31, 0.1);
+}
+.container--guide .layout5 {
+  border: dashed 1px #009944;
+  background: rgba(0, 153, 68, 0.1);
+}
+.container--guide .layout6 {
+  border: dashed 1px #009E96;
+  background: rgba(0, 158, 150, 0.1);
+}
+.container--guide .layout7 {
+  border: dashed 1px #00A0E9;
+  background: rgba(0, 160, 233, 0.1);
+}
+.container--guide .layout8 {
+  border: dashed 1px #0068B7;
+  background: rgba(0, 104, 183, 0.1);
+}
+.container--guide .layout9 {
+  border: dashed 1px #1D2088;
+  background: rgba(29, 32, 136, 0.1);
+}
+.container--guide .layout10 {
+  border: dashed 1px #920783;
+  background: rgba(146, 7, 131, 0.1);
+}
+.container--guide .layout11 {
+  border: dashed 1px #E4007F;
+  background: rgba(228, 0, 127, 0.1);
+}
+.container--guide .layout12 {
+  border: dashed 1px #e5004f;
+  background: rgba(229, 0, 79, 0.1);
+}
+
 /*====================
   font
 ====================*/
@@ -9,29 +61,17 @@
   line-height: 28px;
 }
 
-.top {
-  font-family: "游明朝体", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
-  font-weight: normal;
-  font-size: 90px;
-}
 .top .layout1,
 .top .layout2,
 .top .layout3,
 .top .layout4,
-.top .layout5 {
+.top .layout5,
+.top .layout6,
+.top .layout7,
+.top .layout8,
+.top .layout9,
+.top .layout10 {
   padding: 80px 16px;
-}
-.top__letter--first {
-  color: #00e8fa;
-}
-.top__letter--second {
-  color: #001429;
-}
-.top__letter--third {
-  color: #043692;
-}
-.top__letter--fourth {
-  color: #9300f0;
 }
 
 .box {
@@ -424,18 +464,43 @@
   font-family: "Noto Sans JP", sans-serif;
   background-color: #44bed5;
 }
+.question .layout3 {
+  padding: 0 40px;
+}
+.question .layout4 {
+  padding: 0 40px 8px;
+}
+.question .layout5 {
+  padding: 0 40px 8px;
+}
+.question .layout6 {
+  padding: 0 40px 8px;
+}
+.question .layout7 {
+  padding: 0 40px 8px;
+}
+.question .layout8 {
+  padding: 0 40px 8px;
+}
+.question .layout9 {
+  padding: 0 40px 8px;
+}
+.question .layout10 {
+  padding: 0 40px 8px;
+}
 
 .questionList {
   list-style: none;
   background-color: #FFF;
   border-radius: 16px;
   padding: 16px;
+  height: 88px;
+  position: relative;
 }
 .questionList__title {
   color: #446fc8;
-  position: relative;
 }
-.questionList__title::after {
+.questionList::after {
   content: "";
   position: absolute;
   width: 58px;
@@ -443,8 +508,8 @@
   border-bottom: 1px solid #3A61BD;
   border-right: 1px solid #3A61BD;
   transform: skew(45deg);
-  bottom: 0;
-  right: 0;
+  bottom: 16px;
+  right: 24px;
   pointer-events: none;
 }
 
@@ -776,7 +841,7 @@
 }
 */
 /*====================
-  reset
+  layout
 ====================*/
 /*====================
   mixin

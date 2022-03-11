@@ -1,21 +1,29 @@
 @use "../foundation/various" as v;
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
-
 .top {
+
+		.layout1,
+		.layout2,
+		.layout3,
+		.layout4,
+		.layout5,
+		.layout6,
+		.layout7,
+		.layout8,
+		.layout9,
+		.layout10 {
+			padding: 80px 16px;
+		}
+		
+}
+
+.box {
 	font-family: v.$base_font;
 	background-color: #001429;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 24px;
-		.layout1,
-		.layout2,
-		.layout3,
-		.layout4,
-		.layout5 {
-			padding: 80px 16px;
-		}
-		
 	&__title {
 		text-align: center;
 		padding: 2em;
@@ -40,11 +48,11 @@
 			bottom: 0;
 			right: 0;
 		}
-		&--large {
+		&--gradation {
 			font-size: 30px;
-			color: #FFF;
+			color: #c6f21f;
 		}
-		&--small {
+		&--nomal {
 			color: #FFF;
 			font-size: 20px;
 		}
@@ -378,27 +386,65 @@
 .question {
 	font-family: v.$base_font;
 	background-color: #44bed5;
+		//.layout1,
+		//.layout2,
+		//.layout3,
+		//.layout4,
+		//.layout5,
+		//.layout6,
+		//.layout7,
+		//.layout8,
+		//.layout9,
+		//.layout10 {
+		//	padding: 80px 16px;
+		//}
+		.layout3 {
+			padding: 0 40px;
+		}
+		.layout4 {
+			padding: 0 40px 8px;
+		}
+		.layout5 {
+			padding: 0 40px 8px;
+		}
+		.layout6 {
+			padding: 0 40px 8px;
+		}
+		.layout7 {
+			padding: 0 40px 8px;
+		}
+		.layout8 {
+			padding: 0 40px 8px;
+		}
+		.layout9 {
+			padding: 0 40px 8px;
+		}
+		.layout10 {
+			padding: 0 40px 8px;
+		}
+		
 }
 .questionList {
 	list-style: none;
 	background-color: #FFF;
 	border-radius: 16px;
 	padding: 16px;
+	height: 88px;
+	position: relative;
 	&__title {
 		color: #446fc8;
-		position: relative;
-		&::after {
-			content: "";
-			position: absolute;
-			width: 58px;
-			height: 8px;
-			border-bottom: 1px solid #3A61BD;
-			border-right: 1px solid #3A61BD;
-			transform: skew(45deg);
-			bottom: 0;
-			right: 0;
-			pointer-events: none;
-		}
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		width: 58px;
+		height: 8px;
+		border-bottom: 1px solid #3A61BD;
+		border-right: 1px solid #3A61BD;
+		transform: skew(45deg);
+		bottom: 16px;
+		right: 24px;
+		pointer-events: none;
 	}
 }
 .questionModal {
