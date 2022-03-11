@@ -1,32 +1,21 @@
 @use "../foundation/various" as v;
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
-.top {
-		font-family: "游明朝体", 'Yu Mincho', 'YuMincho', 'Noto Serif JP', serif;
-		font-weight: normal;
-		font-size: 90px;
-	&__letter {
-		&--first {
-			color: #00e8fa;
-		}
-		&--second {
-			color: #001429;
-		}
-		&--third {
-			color: #043692;
-		}
-		&--fourth {
-			color: #9300f0;
-		}
-	}
-}
 
-.box {
+.top {
 	font-family: v.$base_font;
 	background-color: #001429;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 24px;
+		.layout1,
+		.layout2,
+		.layout3,
+		.layout4,
+		.layout5 {
+			padding: 80px 16px;
+		}
+		
 	&__title {
 		text-align: center;
 		padding: 2em;
@@ -51,11 +40,11 @@
 			bottom: 0;
 			right: 0;
 		}
-		&--gradation {
+		&--large {
 			font-size: 30px;
-			color: #c6f21f;
+			color: #FFF;
 		}
-		&--nomal {
+		&--small {
 			color: #FFF;
 			font-size: 20px;
 		}
