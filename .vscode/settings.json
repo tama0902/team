@@ -7,5 +7,6 @@
 	  "last 1 versions"
 	],
 	"dartsass.outputFormat": "cssonly",
-	"dartsass.sassBinPath": "c:\\Users\\tam00\\Desktop\\team\\node_modules\\sass\\sass.js"
+	"dartsass.sassBinPath": "c:\\Users\\tam00\\Desktop\\team\\node_modules\\sass\\sass.js",
+	"editor.insertSpaces": false
 }
